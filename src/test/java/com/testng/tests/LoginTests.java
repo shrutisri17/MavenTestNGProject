@@ -21,6 +21,7 @@ public class LoginTests extends BaseTest {
 	@BeforeMethod
 	public void launch() throws InterruptedException {
 		driver = launchapplication();
+		screenshot = new ScreenshotUtility();
 		loginpage = new LoginPage(driver);
 	}
 	@Test
@@ -29,7 +30,7 @@ public class LoginTests extends BaseTest {
 		loginpage.enterinpassword("admin123");
 		screenshot.takescreenshot(driver, methodname);
 		methodname = Thread.currentThread().getStackTrace()[1].getMethodName();
-		loginpage.login();
+		loginpage.waitbeforelogin();
 	}
     //@Test
     public void loginwithinvalidCredentials() {
