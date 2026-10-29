@@ -1,0 +1,9 @@
+
+<suite name="Login Test Suite">
+    <test name="Login Tests">
+        <classes>
+            <class name="com.testng.tests.LoginTests"/>
+            <class name="com.testng.tests.HomeTests"/>
+        </classes>
+    </test>
+</suite>
